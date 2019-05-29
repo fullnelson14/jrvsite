@@ -29,6 +29,11 @@ export default class Header extends React.Component {
   }
   componentDidMount() {
     window.addEventListener("scroll", this.resizeOnScroll)
+
+    this.homeHeader =
+      window.location.pathname === "/"
+        ? `background-color: transparent;`
+        : `background-color: #ff5018;`
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.resizeOnScroll)
@@ -55,16 +60,7 @@ export default class Header extends React.Component {
           position: fixed;
           top: 0;
           z-index: 10;
-          ${
-            document.location.pathname === "/"
-              ? `background: linear-gradient(
-            180deg,
-            rgba(255, 80, 24, 1) 50%,
-            rgba(0, 0, 0, 0) 100%
-          );
-          `
-              : `background-color: #ff5018;`
-          }
+          ${this.homeHeader}
           transition-duration: ${transitionTime};
 
           ${baseState ? baseStyles : smallStyles}
