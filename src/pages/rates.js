@@ -6,7 +6,7 @@ import Section from "../components/Section"
 
 export default () => (
   <Layout>
-    <Section sideMargins="5vw">
+    <Section topMargin="20vh" sideMargins="5vw">
       <div
         css={css`
           text-align: center;

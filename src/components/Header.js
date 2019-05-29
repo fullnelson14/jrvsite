@@ -3,7 +3,6 @@ import { css } from "@emotion/core"
 import LinkButton from "./headerComponents/LinkButton"
 import logoImg from "../assets/images/LogoEdit.png"
 import { Link } from "gatsby"
-import headerBackground from "../assets/images/cactus_landscape1.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const transitionTime = `300ms`
@@ -12,6 +11,9 @@ const baseStyles = css`
 `
 const smallStyles = css`
   height: 10%;
+
+  border-bottom: 2px solid #bd2d00;
+  background-color: #ff5018;
 
   div.smaller {
     height: 100%;
@@ -53,9 +55,17 @@ export default class Header extends React.Component {
           position: fixed;
           top: 0;
           z-index: 10;
-          background: no-repeat center/100% url(${headerBackground});
+          ${
+            document.location.pathname === "/"
+              ? `background: linear-gradient(
+            180deg,
+            rgba(255, 80, 24, 1) 50%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          `
+              : `background-color: #ff5018;`
+          }
           transition-duration: ${transitionTime};
-          border-bottom: 2px solid #bd2d00;
 
           ${baseState ? baseStyles : smallStyles}
         `}
@@ -99,7 +109,6 @@ export default class Header extends React.Component {
                 font-size: 20px;
                 color: #ffdd80;
                 font-weight: bold;
-                color: #ffdd80;
               }
               p,
               a {

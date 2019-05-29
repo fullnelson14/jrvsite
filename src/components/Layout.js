@@ -30,7 +30,6 @@ export default ({ children }) => (
     <main
       css={css`
         min-height: 100vh;
-        margin: 20vh 0 0 0;
       `}
     >
       {children}
