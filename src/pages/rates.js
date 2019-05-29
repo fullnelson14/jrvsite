@@ -1,12 +1,21 @@
 import React from "react"
 import { css } from "@emotion/core"
 import Layout from "../components/Layout"
-import RateRow from "../components/RateRow"
+import RateRow from "../components/ratesComponents/RateRow"
 import Section from "../components/Section"
 
 export default () => (
   <Layout>
-    <Section topMargin="20vh" sideMargins="5vw">
+    <Section>
+      <div
+        css={css`
+          height: 15vh;
+          background-color: #fdf3e2;
+          border-bottom: 2px solid #cca96e;
+        `}
+      />
+    </Section>
+    <Section sideMargins="5vw">
       <div
         css={css`
           text-align: center;

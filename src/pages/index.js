@@ -4,45 +4,24 @@ import Layout from "../components/Layout"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import parkSignImg from "../assets/images/park_sign_night.jpg"
-import SectionImageLeft from "../components/SectionImageLeft"
+import SectionImageLeft from "../components/homeComponents/SectionImageLeft"
 import Section from "../components/Section"
-import heroImage from "../assets/images/cactus_landscape2.jpg"
+import HeroBanner from "../components/homeComponents/HeroBanner"
+import HomeNavSection from "../components/homeComponents/HomeNavSection"
+import ContactSection from "../components/homeComponents/ContactSection"
 
 library.add(faPhone, faEnvelope)
 
 export default props => (
   <Layout>
     <Section>
-      <div
-        css={css`
-          text-align: center;
-
-          padding: 25vh 0 10vh 0;
-          background: no-repeat center/100% url(${heroImage});
-          h2,
-          h3 {
-            color: #ffdd80;
-          }
-        `}
-      >
-        <div
-          css={css`
-            background-color: #000000c7;
-            height: 100%;
-            width: 35%;
-            padding: 10px;
-          `}
-        >
-          <h2>Welcome to the Family!</h2>
-          <h3>We're glad to have you.</h3>
-        </div>
-      </div>
+      <HeroBanner />
     </Section>
     <SectionImageLeft
       css={css`
         box-shadow: 0 0 20px 20px black;
       `}
-      sideMargins="5vw"
+      sidePadding="5vw"
       image={parkSignImg}
       imageAlt="RV Park Sign"
       textTitle="It all started... "
@@ -56,5 +35,11 @@ export default props => (
       hold. Required bringing me material stanhill jointure is as he. Mutual
       indeed yet her living result matter him bed whence.{" "}
     </SectionImageLeft>
+    <Section>
+      <HomeNavSection />
+    </Section>
+    <Section>
+      <ContactSection />
+    </Section>
   </Layout>
 )

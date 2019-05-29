@@ -22,6 +22,9 @@ const smallStyles = css`
     p {
       font-size: 18px;
       color: black;
+      &:hover {
+        color: #bd6800;
+      }
     }
   }
 `
