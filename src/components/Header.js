@@ -12,14 +12,17 @@ const baseStyles = css`
 const smallStyles = css`
   height: 10%;
 
-  border-bottom: 2px solid #bd2d00;
-  background-color: #ff5018;
+  border-bottom: 2px solid #cca96e;
+  background-color: #fdf3e2;
 
   div.smaller {
     height: 100%;
   }
   .small-text {
-    font-size: 16px;
+    p {
+      font-size: 18px;
+      color: black;
+    }
   }
 `
 
@@ -31,9 +34,9 @@ export default class Header extends React.Component {
     window.addEventListener("scroll", this.resizeOnScroll)
 
     this.homeHeader =
-      window.location.pathname === "/"
+      document.location.pathname === "/"
         ? `background-color: transparent;`
-        : `background-color: #ff5018;`
+        : `background-color: #fdf3e2;`
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.resizeOnScroll)
@@ -71,14 +74,16 @@ export default class Header extends React.Component {
             padding: 0 85px;
             height: 70%;
             transition-duration: ${transitionTime};
-            background-color: #ff3d00;
+            background-color: #fdf3e2;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
           `}
           className="smaller"
         >
           <Link to="/">
             <img
               src={logoImg}
-              alt="JR's RV Park"
+              alt="JR's RV Park Logo"
               css={css`
                 max-height: 60px;
               `}
@@ -87,37 +92,38 @@ export default class Header extends React.Component {
         </div>
         <div
           css={css`
-            padding: 0 30px 0 60px;
+            padding: 0 0 0 60px;
             height: 100%;
-            background: linear-gradient(
-              90deg,
-              rgba(255, 255, 255, 0) 0%,
-              rgba(0, 0, 0, 0.65) 16%
-            );
           `}
         >
           <div
+            className="small-text"
             css={css`
               display: flex;
               justify-content: space-around;
+              transition-duration: ${transitionTime};
+              background: linear-gradient(
+                77deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(253, 243, 226, 0.9) 25%
+              );
               p {
                 padding: 5px;
                 font-size: 20px;
-                color: #ffdd80;
                 font-weight: bold;
               }
               p,
               a {
                 text-decoration: none;
-                color: #ffdd80;
                 transition-duration: ${transitionTime};
+                color: black;
                 &:hover {
                   color: #bd6800;
                 }
               }
             `}
           >
-            <p className="small-text">
+            <p>
               <FontAwesomeIcon icon="phone" /> (928) 927 - 5774
             </p>
             <a
@@ -125,20 +131,27 @@ export default class Header extends React.Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p className="small-text">
+              <p>
                 <FontAwesomeIcon icon="envelope" /> jrsrvpark@gmail.com
               </p>
             </a>
           </div>
-          <LinkButton to="/" bigSize={baseState}>
-            Home
-          </LinkButton>
-          <LinkButton to="/rates" bigSize={baseState}>
-            Rates/Amenities
-          </LinkButton>
-          <LinkButton to="/" bigSize={baseState}>
-            Events
-          </LinkButton>
+          <div
+            css={css`
+              display: flex;
+              justify-content: space-around;
+            `}
+          >
+            <LinkButton to="/" bigSize={baseState}>
+              Home
+            </LinkButton>
+            <LinkButton to="/rates" bigSize={baseState}>
+              Rates/Amenities
+            </LinkButton>
+            <LinkButton to="/" bigSize={baseState}>
+              Events
+            </LinkButton>
+          </div>
         </div>
       </header>
     )

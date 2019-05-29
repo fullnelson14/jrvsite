@@ -47,13 +47,14 @@ export default props => (
       imageAlt="RV Park Sign"
       textTitle="It all started... "
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      Is branched in my up strictly remember. Songs but chief has ham widow
+      downs. Genius or so up vanity cannot. Large do tried going about water
+      defer by. Silent son man she wished mother. Distrusts allowance do
+      knowledge eagerness assurance additions to. Picture removal detract
+      earnest is by. Esteems met joy attempt way clothes yet demesne tedious.
+      Replying an marianne do it an entrance advanced. Two dare say play when
+      hold. Required bringing me material stanhill jointure is as he. Mutual
+      indeed yet her living result matter him bed whence.{" "}
     </SectionImageLeft>
   </Layout>
 )
