@@ -1,7 +1,7 @@
-exports.handler = function(event, context, callback) {
+exports.handler = (event, context, callback) => {
   callback("ERROR", {
     statusCode: 200,
     body: "WORKS!",
   })
-  console.log(event)
+  //console.log(event)
 }
