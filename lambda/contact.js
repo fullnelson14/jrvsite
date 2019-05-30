@@ -1,5 +1,5 @@
 exports.handler = (event, context, callback) => {
-  callback("ERROR", {
+  callback(null, {
     statusCode: 200,
     body: "WORKS!",
   })
