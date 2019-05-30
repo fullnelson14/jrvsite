@@ -151,7 +151,7 @@ export default class Header extends React.Component {
             <LinkButton to="/rates" bigSize={baseState}>
               Rates/Amenities
             </LinkButton>
-            <LinkButton to="/" bigSize={baseState}>
+            <LinkButton to="/events" bigSize={baseState}>
               Events
             </LinkButton>
           </div>

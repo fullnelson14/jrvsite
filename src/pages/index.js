@@ -3,7 +3,6 @@ import { css } from "@emotion/core"
 import Layout from "../components/Layout"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import parkSignImg from "../assets/images/park_sign_night.jpg"
 import SectionImageLeft from "../components/homeComponents/SectionImageLeft"
 import Section from "../components/Section"
 import HeroBanner from "../components/homeComponents/HeroBanner"
@@ -22,8 +21,6 @@ export default props => (
         box-shadow: 0 0 20px 20px black;
       `}
       sidePadding="5vw"
-      image={parkSignImg}
-      imageAlt="RV Park Sign"
       textTitle="It all started... "
     >
       Is branched in my up strictly remember. Songs but chief has ham widow
