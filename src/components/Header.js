@@ -120,9 +120,9 @@ export default class Header extends React.Component {
                 text-decoration: none;
                 transition-duration: ${transitionTime};
                 color: black;
-                &:hover {
-                  color: #bd6800;
-                }
+              }
+              a:hover {
+                color: #bd6800;
               }
             `}
           >

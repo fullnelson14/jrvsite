@@ -21,6 +21,7 @@ export default props => {
         padding: 50px ${props.sidePadding};
         border-top: 3px solid #ffe7a7;
         border-bottom: 3px solid #464542;
+        background-color: #fdf3e2;
         position: relative;
         z-index: 5;
         box-shadow: 0 0 25px 40px rgba(0, 0, 0, 0.5);
@@ -29,8 +30,6 @@ export default props => {
       <div
         css={css`
           display: flex;
-          border-top: 2px solid black;
-          border-bottom: 2px solid black;
         `}
       >
         <div

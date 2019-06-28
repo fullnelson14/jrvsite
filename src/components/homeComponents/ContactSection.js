@@ -13,7 +13,7 @@ const Container = styled.div`
   z-index: 5;
 
   box-shadow: 0 -20px 25px 20px rgba(0, 0, 0, 0.5);
-  background-color: #ffdd80;
+  background-color: #fdf3e2;
 `
 const LeftDiv = styled.div`
   width: 60%;
